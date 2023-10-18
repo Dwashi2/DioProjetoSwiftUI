@@ -14,6 +14,10 @@
 		564652C52AE0570C0030FE3C /* H4XOR_NewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652C42AE0570C0030FE3C /* H4XOR_NewsTests.swift */; };
 		564652CF2AE0570C0030FE3C /* H4XOR_NewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652CE2AE0570C0030FE3C /* H4XOR_NewsUITests.swift */; };
 		564652D12AE0570C0030FE3C /* H4XOR_NewsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652D02AE0570C0030FE3C /* H4XOR_NewsUITestsLaunchTests.swift */; };
+		564652DF2AE059450030FE3C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652DE2AE059450030FE3C /* NetworkManager.swift */; };
+		564652E12AE05A500030FE3C /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652E02AE05A500030FE3C /* PostData.swift */; };
+		564652E42AE05F1E0030FE3C /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652E32AE05F1E0030FE3C /* DetailView.swift */; };
+		564652E62AE062330030FE3C /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564652E52AE062330030FE3C /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		564652CA2AE0570C0030FE3C /* H4XOR NewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "H4XOR NewsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		564652CE2AE0570C0030FE3C /* H4XOR_NewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4XOR_NewsUITests.swift; sourceTree = "<group>"; };
 		564652D02AE0570C0030FE3C /* H4XOR_NewsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H4XOR_NewsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		564652DE2AE059450030FE3C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		564652E02AE05A500030FE3C /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		564652E32AE05F1E0030FE3C /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		564652E52AE062330030FE3C /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,9 @@
 		564652B22AE0570A0030FE3C /* H4XOR News */ = {
 			isa = PBXGroup;
 			children = (
+				564652DD2AE059330030FE3C /* Models */,
 				564652B32AE0570A0030FE3C /* H4XOR_NewsApp.swift */,
-				564652B52AE0570A0030FE3C /* ContentView.swift */,
+				564652E22AE05F0F0030FE3C /* Views */,
 				564652B72AE0570C0030FE3C /* Assets.xcassets */,
 				564652B92AE0570C0030FE3C /* Preview Content */,
 			);
@@ -125,6 +134,25 @@
 				564652D02AE0570C0030FE3C /* H4XOR_NewsUITestsLaunchTests.swift */,
 			);
 			path = "H4XOR NewsUITests";
+			sourceTree = "<group>";
+		};
+		564652DD2AE059330030FE3C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				564652DE2AE059450030FE3C /* NetworkManager.swift */,
+				564652E02AE05A500030FE3C /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		564652E22AE05F0F0030FE3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				564652B52AE0570A0030FE3C /* ContentView.swift */,
+				564652E32AE05F1E0030FE3C /* DetailView.swift */,
+				564652E52AE062330030FE3C /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 564652A72AE0570A0030FE3C;
+			packageReferences = (
+				564652E72AE064360030FE3C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 564652B12AE0570A0030FE3C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,7 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				564652DF2AE059450030FE3C /* NetworkManager.swift in Sources */,
+				564652E12AE05A500030FE3C /* PostData.swift in Sources */,
 				564652B62AE0570A0030FE3C /* ContentView.swift in Sources */,
+				564652E62AE062330030FE3C /* WebView.swift in Sources */,
+				564652E42AE05F1E0030FE3C /* DetailView.swift in Sources */,
 				564652B42AE0570A0030FE3C /* H4XOR_NewsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +623,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		564652E72AE064360030FE3C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 564652A82AE0570A0030FE3C /* Project object */;
 }
